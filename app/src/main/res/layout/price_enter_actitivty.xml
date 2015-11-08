@@ -204,16 +204,14 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1">
-            <TextView
+            <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="GO"
                 android:gravity="center"
-                android:textSize="35dp"
-                android:textColor="#FFFFFF"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/bar_2"
                 android:clickable="true"
-                android:onClick="pushGo"
-                android:fontFamily="sans-serif-light"/>
+                android:onClick="pushGo"/>
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
