@@ -1,6 +1,7 @@
 package popcornchicken.myapplication.Utility;
 
 import android.location.Location;
+import android.util.Log;
 
 /**
  * Created by ianwind2 on 15/11/7.
@@ -17,9 +18,15 @@ public class Event {
 
     public Event(String latitude, String longitude, String cityName, String url, String title,
                  String description, String start_time, String end_time, String image_url){
-
-        location.setLatitude(Double.valueOf(latitude));
-        location.setLongitude(Double.valueOf(longitude));
+        if(latitude.isEmpty() || longitude.isEmpty()){
+            return;
+        }
+        try{
+            location.setLatitude(Double.parseDouble(latitude));
+            location.setLongitude(Double.parseDouble(longitude));
+        } catch (Exception e){
+            return;
+        }
         this.cityName = cityName;
         this.url = url;
         this.title = title;

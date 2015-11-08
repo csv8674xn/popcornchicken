@@ -84,6 +84,12 @@ public class PriceEnterActivity extends ActionBarActivity implements GoogleApiCl
         Intent intent = new Intent(PriceEnterActivity.this, MapActivity.class);
         intent.putExtra("latitude", mLastLocation.getLatitude());
         intent.putExtra("longitude", mLastLocation.getLongitude());
+        if(totalPrice.getText().equals("$")){
+            intent.putExtra("price", totalPrice.getText() + "0");
+        } else {
+            intent.putExtra("price", totalPrice.getText());
+        }
+
         startActivity (intent);
     }
     private Boolean displayGpsStatus() {

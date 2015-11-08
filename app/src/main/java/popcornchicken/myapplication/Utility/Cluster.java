@@ -10,7 +10,8 @@ import java.util.ArrayList;
 public class Cluster {
     public Location location = new Location("");
     public ArrayList<Event> events;
-
+    public String cityName;
+    public boolean isValid = true;
     public Cluster(){
         events = new ArrayList<>();
     }
@@ -19,9 +20,16 @@ public class Cluster {
         return events.size();
     }
 
-    public void setLocation(String latitude, String longitude){
-        location.setLatitude(Double.valueOf(latitude));
-        location.setLongitude(Double.valueOf(longitude));
+    public void setLocation(String latitude, String longitude, String city){
+        try{
+            location.setLatitude(Double.valueOf(latitude));
+            location.setLongitude(Double.valueOf(longitude));
+        } catch(Exception e){
+            this.isValid = false;
+            return;
+        }
+
+        this.cityName = city;
     }
 
     public void AddEvent(Event event){

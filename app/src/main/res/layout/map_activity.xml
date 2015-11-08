@@ -9,12 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         class="com.google.android.gms.maps.SupportMapFragment"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:onClick="slideUpDown"
-        android:text="Slide up / down" />
+
     <RelativeLayout
         android:id="@+id/hidden_panel"
         android:layout_width="match_parent"
