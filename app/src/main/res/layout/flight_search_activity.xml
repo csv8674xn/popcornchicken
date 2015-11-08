@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:id="@+id/ll_flight_info"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:weightSum="5">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="SFO"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:paddingLeft="30dp"
+            android:fontFamily="sans-serif-light"
+            android:layout_weight="2"/>
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="DXB"
+            android:textSize="25dp"
+            android:paddingRight="30dp"
+            android:gravity="center"
+            android:fontFamily="sans-serif-light"
+            android:layout_weight="2"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_below="@+id/ll_flight_info"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="380dp"
+        android:layout_height="200dp"
+        android:src="@drawable/price_enter_background"
+        android:scaleType="fitXY"/>
+
+
+
+</RelativeLayout>
